@@ -50,7 +50,9 @@ table {
 /* END CSS RESET */
 
 /* Start of content */
-
+*{
+    box-sizing: border-box;
+}
 html{
     background-color: #000000;
 }
@@ -77,10 +79,11 @@ nav{
     width: auto;
     padding: 15px;
     justify-content: center;
+    text-align: center;
 }
+nav a {font-size: 1.5em;}
 ul{
-    margin-left: ;
-    width: 50%;
+    width: ;
     display: flex;
     list-style-type: none;
     
@@ -100,7 +103,7 @@ a[href="#blank"]{
     display: none;
 }
 h1{
-    font-size: x-large;
+    font-size: 3em;
     color: #007d7b;
 }
 h2{
@@ -110,25 +113,74 @@ h2{
     font-weight: bold;
     justify-content: center;
     padding: 10px;
+    font-size: 2em;
 
 }
 p {
     padding: 5px 10px;
+    font-size: 1.25em;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+    padding: 2px;
 }
 section{
     display: block;
 }
+/* About */
+.about{
+    padding: 20px auto;
+}
+/* Gallery */
 .gallery{
-    display: block;
+    display: grid;
     padding: 10px;
-    justify-items: center;
+    margin: 0 auto;
+}
+.gallery div{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 .gallery img{
-    justify-content: center;
-    padding: auto;
-    width: 400px;
+    justify-items: center;
+    max-width: 100%;
+    height: auto;
 }
+figure img, figcaption {
+    grid-column: 1 / 5;
+    grid-row: 1/5;
+}
+figure{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    text-align: center;
+    padding-bottom: 20px;
+}
+figure img{
+    grid-column: 1 / 5;
+}
+.top {
+    grid-column: 2 / 4;
+    padding-top: 10px;
+    font-size: 1em;
+}
+.down{
+    font-size: 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    grid-row: 4/5;
+    grid-column: -4/-2;
+    padding-bottom: 10px;
+}
+/* Text Color */
+/* chile guat, hawaii, moab, wyom WHITE */
+[class$="white"]{
+    color: #ffffff;
+}
+/* Contact */
 .contact{
     background-color: #000000;
     color: #ffffff;
@@ -138,28 +190,73 @@ section{
     color: #ffffff;
 }
 .contact p {
-    display: flex;
     line-height: 1.5;
-    justify-content: center;
+    text-align: center;
 }
-form{
-    display: block;
+form{  
+    margin: 0 auto;
+    width: 80%;
+}
+fieldset input{
+    color: #007d7b;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100%;
+}
+fieldset {
+    width: 100%;
+    margin: 0 auto;
     align-items: center;
-    justify-content: center;
-    
+}
+input[value="submit"] {
+    display: block;
+    background-color: #007d7b;
+    color: #ffffff;
+    border-style: hidden;
+    border-radius: 25px;
+    width: 75%;
 }
 footer {
     display: flex;
     background-color: #000000;
     color: #ffffff;
     justify-content: center;
+    padding-top: 50px;
+    font-size: small;
 }
-.about{
+
+@media screen and (min-width:880px) {
+    header{
+        text-align: left;
+        padding-left: 20px;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+        justify-items: center;
+    }
+    .gallery div{
+        display: grid;
+    }
 
 }
-@media (max-width:880px) {
-
-}
-@media (max-width:1300px) {
+@media (min-width:1300px) {
+    header{
+        text-align: left;
+        padding-left: 20px;
+    }
+    nav {
+        justify-content: flex-end;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 10px;
+        justify-items: center;
+    }
+    .gallery div{
+        display: grid;
+    }
 
 }
