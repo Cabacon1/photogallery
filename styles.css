@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,25 +91,44 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -50,29 +137,34 @@ table {
 /* END CSS RESET */
 
 /* Start of content */
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     background-color: #000000;
 }
-body{
+
+body {
     max-width: 80%;
     min-width: 375px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff
 }
-main{
+
+main {
     justify-content: center;
     display: block;
 }
-header{
+
+header {
     text-align: center;
     margin-bottom: 10px;
-    padding: 10px auto;
+    padding: 10px;
 }
-nav{ 
+
+nav {
     background-color: #000000;
     color: #ffffff;
     display: flex;
@@ -81,92 +173,115 @@ nav{
     justify-content: center;
     text-align: center;
 }
-nav a {font-size: 1.5em;}
-ul{
-    width: ;
+
+nav a {
+    font-size: 1.5em;
+}
+
+ul {
     display: flex;
     list-style-type: none;
-    
+
 }
-li{
+
+li {
     padding: 5px;
     justify-content: center;
     align-items: center;
-    
+
 }
-a{
+
+a {
     width: 56px;
     color: #ffffff;
     text-decoration: none;
 }
-a[href="#blank"]{
+
+a[href="#blank"] {
     display: none;
 }
-h1{
+
+h1 {
     font-size: 3em;
     color: #007d7b;
 }
-h2{
+
+h2 {
     display: flex;
     color: #000000;
     font-size: large;
     font-weight: bold;
     justify-content: center;
-    padding: 10px;
+    padding: 20px 10px;
     font-size: 2em;
-
 }
+
 p {
     padding: 5px 10px;
     font-size: 1.25em;
 }
-figcaption, label, input, small {
+
+figcaption,
+label,
+input,
+small {
     font-size: 1em;
     padding: 2px;
 }
-section{
+
+section {
     display: block;
 }
+
 /* About */
-.about{
-    padding: 20px auto;
+.about {
+    padding: 20px;
 }
+
 /* Gallery */
-.gallery{
+.gallery {
     display: grid;
     padding: 10px;
     margin: 0 auto;
 }
-.gallery div{
+
+.gallery div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.gallery img{
+
+.gallery img {
     justify-items: center;
     max-width: 100%;
     height: auto;
 }
-figure img, figcaption {
+
+figure img,
+figcaption {
     grid-column: 1 / 5;
     grid-row: 1/5;
 }
-figure{
+
+figure {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     text-align: center;
     padding-bottom: 20px;
 }
-figure img{
+
+figure img {
     grid-column: 1 / 5;
 }
+
 .top {
     grid-column: 2 / 4;
     padding-top: 10px;
     font-size: 1em;
 }
-.down{
+
+.down {
     font-size: 1em;
     display: flex;
     align-items: flex-end;
@@ -175,39 +290,47 @@ figure img{
     grid-column: -4/-2;
     padding-bottom: 10px;
 }
+
 /* Text Color */
 /* chile guat, hawaii, moab, wyom WHITE */
-[class$="white"]{
+[class$="white"] {
     color: #ffffff;
 }
+
 /* Contact */
-.contact{
+.contact {
     background-color: #000000;
     color: #ffffff;
     display: block;
 }
-.contact h2{
+
+.contact h2 {
     color: #ffffff;
 }
+
 .contact p {
     line-height: 1.5;
     text-align: center;
 }
-form{  
+
+form {
     margin: 0 auto;
     width: 80%;
 }
-fieldset input{
+
+fieldset input {
     color: #007d7b;
     font-weight: bold;
     margin: 0 auto;
     width: 100%;
 }
+
 fieldset {
     width: 100%;
     margin: 0 auto;
     align-items: center;
 }
+
 input[value="submit"] {
     display: block;
     background-color: #007d7b;
@@ -216,6 +339,7 @@ input[value="submit"] {
     border-radius: 25px;
     width: 75%;
 }
+
 footer {
     display: flex;
     background-color: #000000;
@@ -226,36 +350,42 @@ footer {
 }
 
 @media screen and (min-width:880px) {
-    header{
+    header {
         text-align: left;
         padding-left: 20px;
     }
-    .gallery{
+
+    .gallery {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 10px;
         justify-items: center;
     }
-    .gallery div{
+
+    .gallery div {
         display: grid;
     }
 
 }
+
 @media (min-width:1300px) {
-    header{
+    header {
         text-align: left;
         padding-left: 20px;
     }
+
     nav {
         justify-content: flex-end;
     }
-    .gallery{
+
+    .gallery {
         display: grid;
         grid-template-columns: repeat(3, auto);
         gap: 10px;
         justify-items: center;
     }
-    .gallery div{
+
+    .gallery div {
         display: grid;
     }
 
