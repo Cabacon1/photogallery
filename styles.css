@@ -248,7 +248,6 @@ section {
 .gallery div {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .gallery img {
@@ -365,6 +364,13 @@ footer {
     .gallery div {
         display: grid;
     }
+    #hawaii {
+        display: flex;
+        grid-row: 2/3;
+        align-items: center;
+        position: relative;
+        top: 30px;
+    }
 
 }
 
@@ -389,4 +395,9 @@ footer {
         display: grid;
     }
 
+    #hawaii{
+        position: relative;
+        grid-row: 4/5;
+        top: 20px;
+    }
 }
